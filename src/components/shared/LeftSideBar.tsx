@@ -47,6 +47,7 @@ const LeftSideBar = () => {
                 className={`leftsidebar-link group ${
                   isActive && "bg-primary-500"
                 }`}
+                key={link.label}
               >
                 <NavLink
                   to={link.route}

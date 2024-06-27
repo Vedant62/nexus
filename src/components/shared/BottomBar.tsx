@@ -10,6 +10,7 @@ const BottomBar = () => {
         return (
           <Link
             to={link.route}
+            key={link.label}
             className={`${
               isActive && "bg-primary-500 rounded-[10px]"
             } flex-center flex-col gap-1 p-2 transition`}

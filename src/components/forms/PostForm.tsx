@@ -15,7 +15,10 @@ import {
 import { Input } from "@/components/ui/input";
 import FileUploader from "../shared/FileUploader";
 import { Models } from "appwrite";
-import { useCreatePost } from "@/lib/react-query/queriesAndMutations";
+import {
+  useCreatePost,
+  useUpdatePost,
+} from "@/lib/react-query/queriesAndMutations";
 import { useUserContext } from "@/context/AuthContext";
 
 import { toast } from "../ui/use-toast";
@@ -29,14 +32,16 @@ const postFormSchema = z.object({
 
 type PostFormProps = {
   post?: Models.Document;
+  action: "create" | "update";
 };
 
-const PostForm = ({ post }: PostFormProps) => {
+const PostForm = ({ post, action }: PostFormProps) => {
   const navigate = useNavigate();
   const { user } = useUserContext();
   const { mutateAsync: createPost, isPending: isLoadingCreate } =
     useCreatePost();
-
+  const { mutateAsync: updatePost, isPending: isLoadingUpdate } =
+    useUpdatePost();
   // 1. Define your form.
   const form = useForm<z.infer<typeof postFormSchema>>({
     resolver: zodResolver(postFormSchema),
@@ -50,19 +55,32 @@ const PostForm = ({ post }: PostFormProps) => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof postFormSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    const newPost = await createPost({
-      ...values,
-      userId: user.id,
-    });
-    if (!newPost!) {
-      toast({
-        title: "Failed to create post, please try again",
+    if (post && action === "update") {
+      const updatedPost = await updatePost({
+        ...values,
+        postId: post.$id,
+        imageId: post?.imageId,
+        imageUrl: post?.imageUrl,
       });
+      if (!updatedPost) {
+        toast({
+          title: "Please try again",
+        });
+      } else {
+        navigate(`/posts/${post.$id}`); //post details page
+      }
+    } else {
+      const newPost = await createPost({
+        ...values,
+        userId: user.id,
+      });
+      if (!newPost!) {
+        toast({
+          title: "Failed to create post, please try again",
+        });
+      }
+      navigate("/");
     }
-    navigate("/");
-    console.log(values);
   }
 
   return (
@@ -137,13 +155,15 @@ const PostForm = ({ post }: PostFormProps) => {
         />
         <div className="flex justify-end items-center gap-4">
           <Button type="button" className="shad-button_dark_4">
-            Cancel
+            cancel
           </Button>
           <Button
             type="submit"
             className="shad-button_primary whitespace-nowrap"
+            disabled={isLoadingCreate || isLoadingUpdate}
           >
-            Submit
+            {isLoadingCreate || (isLoadingUpdate && "Loading...")}
+            {action} post
           </Button>
         </div>
       </form>

@@ -6,7 +6,7 @@ const CreatePost = () => {
       <div className="common-container">
         <div className=" max-5xl flex-start gap-3 w-full justify-start">
           <img
-            src="assets/icons/add-post.svg"
+            src="/assets/icons/add-post.svg"
             alt="add"
             height={36}
             width={36}
@@ -14,7 +14,7 @@ const CreatePost = () => {
           <h2 className="h3-bold md:h2-bold text-left w-full">Create Post</h2>
         </div>
 
-        <PostForm />
+        <PostForm action="create" />
       </div>
     </div>
   );
