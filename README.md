@@ -10,4 +10,5 @@
 <img width="649"  alt="Screenshot 2024-06-25 at 6 13 51 PM" src="https://github.com/Vedant62/nexus/assets/67962477/4893a726-378f-4269-b56f-7daabeb24537">
 <img width="1343" alt="Screenshot 2024-06-25 at 6 14 20 PM" src="https://github.com/Vedant62/nexus/assets/67962477/8863f70e-2164-432b-b993-155628ce75ff">
 
-- Other pages
+- Home Page
+<img width="1433" alt="Screenshot 2024-06-28 at 12 16 15 AM" src="https://github.com/Vedant62/nexus/assets/67962477/ecb4728c-e960-4d09-80bc-96e53abe9258">
