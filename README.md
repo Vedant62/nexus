@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+# Nexus - social media app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Sign Up 
+<img width="1436" alt="Screenshot 2024-06-25 at 6 06 29 PM" src="https://github.com/Vedant62/nexus/assets/67962477/972f749d-711c-4584-9ca1-6cbce99af3c1">
 
-Currently, two official plugins are available:
+- Log In
+<img width="1435" alt="Screenshot 2024-06-25 at 6 06 01 PM" src="https://github.com/Vedant62/nexus/assets/67962477/f84825ff-9a8f-4ad1-b4b7-212853d4caf4">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create posts 
+<img width="649"  alt="Screenshot 2024-06-25 at 6 13 51 PM" src="https://github.com/Vedant62/nexus/assets/67962477/4893a726-378f-4269-b56f-7daabeb24537">
+<img width="1343" alt="Screenshot 2024-06-25 at 6 14 20 PM" src="https://github.com/Vedant62/nexus/assets/67962477/8863f70e-2164-432b-b993-155628ce75ff">
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Other pages
