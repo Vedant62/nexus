@@ -1,5 +1,8 @@
 # Nexus - social media app
 
+Checkout on: https://nexus-y42w.vercel.app
+
+
 - Sign Up 
 <img width="1436" alt="Screenshot 2024-06-25 at 6 06 29 PM" src="https://github.com/Vedant62/nexus/assets/67962477/972f749d-711c-4584-9ca1-6cbce99af3c1">
 
