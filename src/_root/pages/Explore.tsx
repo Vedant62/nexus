@@ -70,7 +70,7 @@ const Explore = () => {
         {shouldShowSearchResults ? (
           <SearchResults
             isSearchFetching={isSearchFetching}
-            searchedPosts={searchedPosts}
+            searchedPosts={searchedPosts!}
           />
         ) : shouldShowPosts ? (
           <p className="text-light-4  mt-10 text-center w-full">End of posts</p>
