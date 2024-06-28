@@ -3,7 +3,6 @@ import SignInForm from "./_auth/forms/SignInForm";
 import SignUpForm from "./_auth/forms/SignUpForm";
 import RootLayout from "./_root/RootLayout";
 import {
-  AllUsers,
   CreatePost,
   EditPost,
   Explore,
@@ -31,7 +30,7 @@ const App = () => {
         <Route element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="/explore" element={<Explore />} />
-          <Route path="/all-users" element={<AllUsers />} />
+
           <Route path="/saved" element={<Saved />} />
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:id" element={<EditPost />} />

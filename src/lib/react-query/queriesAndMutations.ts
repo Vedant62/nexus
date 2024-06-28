@@ -174,11 +174,11 @@ export const useGetPosts = () => {
     getNextPageParam: (lastPage) => {
       if (lastPage && lastPage.documents.length === 0) {
         return null;
-      } else {
-        const lastId = lastPage?.documents[lastPage?.documents.length - 1].$id;
-        return lastId;
       }
+
+      return lastPage?.documents[lastPage.documents.length - 1].$id;
     },
+    initialPageParam: null,
   });
 };
 
