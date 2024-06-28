@@ -1,6 +1,9 @@
 # Nexus - social media app
 
-Checkout on: https://nexus-y42w.vercel.app
+Checkout on:  https://nexus-y42w.vercel.app
+
+Technologies used:
+React, TS, Tailwind, TanStack Query, Appwrite, Vercel
 
 
 - Sign Up 
